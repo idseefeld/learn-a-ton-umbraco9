@@ -62,7 +62,21 @@ if (env.IsDevelopment())
 }
 ```
 
-Now you can add to your launch profile
+Now you can add a new profile *swagger* to your launchSettings.json:
+```
+...
+	"Swagger": {
+		"commandName": "Project",
+		"launchBrowser": true,
+		"launchUrl": "swagger",
+		"environmentVariables": {
+			"ASPNETCORE_ENVIRONMENT": "Development"
+		},
+		"applicationUrl": "https://localhost:44341;http://localhost:43622"
+	}
+...
+```
+*(you might use different ports on your localhost)*
 
 ### Configuration
 In appsettings.json add:

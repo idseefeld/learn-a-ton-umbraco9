@@ -110,4 +110,4 @@ services.AddCors(o =>
 		})
 );
 ```
-See you *appConfig.AllowedHosts* is used within the CORS setup.
+See how *appConfig.AllowedHosts* is used within the CORS setup.

@@ -117,6 +117,7 @@ Alternatively you can use "environmentVariables" section of `\Properties\launchS
 ```
 Another critical place for credentials you may find in the SMTP section (see appsettings.Development.json). At least *Username*, *Password* and (*maybe*) *Port* should not be stored in files which go into a repo.
 This time the environment variable names in `\Properties\launchSettings.json` look like this:
+```
 ...
 	"environmentVariables": {
 		"ASPNETCORE_ENVIRONMENT": "Development",

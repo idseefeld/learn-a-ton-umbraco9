@@ -22,23 +22,27 @@ namespace MyCustomUmbracoSolution.Controllers
 		}
 		[HttpGet]
 		[Route("speakers")]
-		public IEnumerable<SpeakerViewModel> GetSpeakers()
+		public SpeakersApiModel GetSpeakers()
 		{
 			var speakersNode = _content.ContentAtRoot().OfType<Speakers>().FirstOrDefault();
-			var speakerList = new List<SpeakerViewModel>();
+			var speakers = new SpeakersApiModel();
+			var speakerList = new List<SpeakerApiModel>();
 			if (speakersNode != null)
 			{
 				foreach (var speaker in speakersNode.Children.OfType<Speaker>())
 				{
-					speakerList.Add(new SpeakerViewModel()
+					speakerList.Add(new SpeakerApiModel()
 					{
-						PersonName = speaker.PersonName,
+						PersonName = speaker.FullName,
 						Name = speaker.Name
 					}) ;
 				}
+				speakers.Name = speakersNode.Name;
+				speakers.Title = speakersNode.Title;
+				speakers.Speakers = speakerList;
 			}
 
-			return speakerList;
+			return speakers;
 		}
 	}
 }

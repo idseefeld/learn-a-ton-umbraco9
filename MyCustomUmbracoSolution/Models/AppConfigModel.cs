@@ -10,6 +10,7 @@ namespace MyCustomUmbracoSolution.Models
 		public ConnectionStringsModel ConnectionStrings { get; set; }
 		public MyCustomSectionModel MyCustomSection { get; set; }
 		public IEnumerable<string> AllowedHosts { get; set; }
+		public UmbracoConfig Umbraco { get; set; }
 	}
 
 	

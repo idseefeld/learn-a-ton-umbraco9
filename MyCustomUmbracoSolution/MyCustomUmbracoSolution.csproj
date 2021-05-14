@@ -8,6 +8,8 @@
         <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
         <PackageReference Include="Umbraco.Cms" Version="9.0.0-beta002" />
+        <PackageReference Include="Umbraco.Cms.SqlCe" Version="9.0.0-beta002" />
+        <PackageReference Include="Umbraco.SqlServerCE" Version="4.0.0.1" />
     </ItemGroup>
 
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyCustomUmbracoSolution.ApiModels
 {
-	public class SpeakersViewModel
+	public class SpeakersApiModel
 	{
 		[JsonPropertyName("name")]
 		public string Name { get; set; }
@@ -15,9 +15,9 @@ namespace MyCustomUmbracoSolution.ApiModels
 		public string Title { get; set; }
 
 		[JsonPropertyName("speakers")]
-		public IEnumerable<SpeakerViewModel> Speakers { get; set; }
+		public IEnumerable<SpeakerApiModel> Speakers { get; set; }
 	}
-	public class SpeakerViewModel
+	public class SpeakerApiModel
 	{
 		[JsonPropertyName("name")]
 		public string Name { get; set; }

@@ -48,11 +48,11 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Person Name
+		/// Full Name
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta002+de0929762c60039b3a41dd34c48227ad85ae377f")]
-		[ImplementPropertyType("personName")]
-		public virtual string PersonName => this.Value<string>(_publishedValueFallback, "personName");
+		[ImplementPropertyType("fullName")]
+		public virtual string FullName => this.Value<string>(_publishedValueFallback, "fullName");
 
 		///<summary>
 		/// Picture

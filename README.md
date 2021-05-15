@@ -1,4 +1,5 @@
 # learn-a-ton-umbraco9
+Dedicated to the weekly meetup sessions with Carole and Emma.
 
 ## Getting Started
 Clone repo, open *MyCustomUmbracoSolution.sln* in Visual Studio 2019 latest with .net 5.0 (if you use a different version, you might experience a different behaviour).

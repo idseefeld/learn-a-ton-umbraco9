@@ -1,6 +1,10 @@
 # learn-a-ton-umbraco9
-## Some useful tooling
 
+## Getting Started
+Clone repo, open *MyCustomUmbracoSolution.sln* in Visual Studio 2019 latest with .net 5.0 (if you use a different version, you might experience a different behaviour).
+Hit F5. You can enter the Umbraco back office with username `admin@test.com` and password `Test!23456`.
+
+## Some Useful Tooling
 
 ### Swagger
 Install NuGet package:

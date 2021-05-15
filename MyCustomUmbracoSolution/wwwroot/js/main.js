@@ -1,5 +1,5 @@
 ﻿const apiClient = axios.create({
-  baseURL: 'https://localhost:44341/umbraco/api',
+  baseURL: apiBaseUrl,
   withCredentials: false,
   headers: {
     Accept: 'application/json',

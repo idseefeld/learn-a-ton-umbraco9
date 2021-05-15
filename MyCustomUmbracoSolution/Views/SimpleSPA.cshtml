@@ -2,20 +2,32 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
 	Layout = null;
+	var apiBaseUrl = $"{UmbracoContext.CleanedUmbracoUrl}umbraco/api";
 }
 <!doctype html>
 <html lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" href="favicon-orange-64.png">
 	<title>Simple VueJs App for Speakers API</title>
 	<!-- development version, includes helpful console warnings -->
 	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
 	<link href="~/css/main.css" rel="stylesheet" />
+	<script>
+		const apiBaseUrl = "@apiBaseUrl";
+	</script>
 </head>
 <body>
 	<div id="app">
 		loading...
 	</div>
+
+	<footer>
+		&copy; Dirk Seefeld, 2021 | <a href="/umbraco/">Back Office</a> | <a href="/swagger">Swagger Docs</a>
+	</footer>
 	<script src="~/js/main.js"></script>
 
 </body>

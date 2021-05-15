@@ -48,11 +48,18 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Full Name
+		/// Company
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta002+de0929762c60039b3a41dd34c48227ad85ae377f")]
-		[ImplementPropertyType("fullName")]
-		public virtual string FullName => this.Value<string>(_publishedValueFallback, "fullName");
+		[ImplementPropertyType("company")]
+		public virtual string Company => this.Value<string>(_publishedValueFallback, "company");
+
+		///<summary>
+		/// Job Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta002+de0929762c60039b3a41dd34c48227ad85ae377f")]
+		[ImplementPropertyType("jobTitle")]
+		public virtual string JobTitle => this.Value<string>(_publishedValueFallback, "jobTitle");
 
 		///<summary>
 		/// Picture
@@ -60,5 +67,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta002+de0929762c60039b3a41dd34c48227ad85ae377f")]
 		[ImplementPropertyType("picture")]
 		public virtual global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent Picture => this.Value<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent>(_publishedValueFallback, "picture");
+
+		///<summary>
+		/// Short Description
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.0.0-beta002+de0929762c60039b3a41dd34c48227ad85ae377f")]
+		[ImplementPropertyType("shortDescription")]
+		public virtual string ShortDescription => this.Value<string>(_publishedValueFallback, "shortDescription");
 	}
 }

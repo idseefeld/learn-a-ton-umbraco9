@@ -7,6 +7,7 @@ using Umbraco.Cms.Core;
 using Umbraco.Cms.Web.Common.Controllers;
 using Umbraco.Cms.Web.Common.PublishedModels;
 using MyCustomUmbracoSolution.ApiModels;
+using Umbraco.Cms.Core.Services;
 
 namespace MyCustomUmbracoSolution.Controllers
 {
@@ -29,16 +30,21 @@ namespace MyCustomUmbracoSolution.Controllers
 			var speakerList = new List<SpeakerApiModel>();
 			if (speakersNode != null)
 			{
-				foreach (var speaker in speakersNode.Children.OfType<Speaker>())
+				//ToDo: Use UmbarcoMapper here?
+				foreach (var speaker in speakersNode.Children.OfType<Speaker>().OrderBy(s => s.Name))
 				{
+					var image = speaker.Picture == null ? null : _content.Media(speaker.Picture.Id) as Image;// ToDo: is this the right way to cast a media type? Wasn't there a more elegant way like TypeMedia?
 					speakerList.Add(new SpeakerApiModel()
 					{
-						PersonName = speaker.FullName,
-						Name = speaker.Name
-					}) ;
+						Name = speaker.Name,
+						Description = speaker.ShortDescription,
+						JobJobTitle = speaker.JobTitle,
+						Company = speaker.Company,
+						PictureUrl = image?.UmbracoFile.Src
+					});
 				}
 				speakers.Name = speakersNode.Name;
-				speakers.Title = speakersNode.Title;
+				speakers.Description = speakersNode.Description;
 				speakers.Speakers = speakerList;
 			}
 

@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace MyCustomUmbracoSolution.ApiModels
 {
-	public class SpeakersApiModel
+	public class SpeakerApiModel
 	{
 		[JsonPropertyName("name")]
 		public string Name { get; set; }
-
+		[JsonPropertyName("jobTitle")]
+		public string JobJobTitle { get; set; }
 		[JsonPropertyName("description")]
 		public string Description { get; set; }
-
-		[JsonPropertyName("speakers")]
-		public IEnumerable<SpeakerApiModel> Speakers { get; set; }
+		[JsonPropertyName("company")]
+		public string Company { get; set; }
+		[JsonPropertyName("image")]
+		public string PictureUrl { get; set; }
 	}
-	
 }

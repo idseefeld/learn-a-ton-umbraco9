@@ -11,15 +11,17 @@ var app = new Vue({
   el: '#app',
   template:
     /*html*/
-    `<div class="speakers">
+    `<div class="speakers" v-if="speakers">
       <h1>{{ speakers.name }}</h1>
-      <h2>{{ speakers.title }}</h2>
-      <div v-for="speaker in speakers.speakers" :key="name" class="speaker-container">
-        <div v-if="speaker.picture" class="speaker-image">
-          <img v-bind:src="speaker.picture">
+      <h2>{{ speakers.description }}</h2>
+      <div v-for="speaker in speakers.speakers" class="speaker-container left">
+        <div v-if="speaker.image" class="speaker-image left">
+          <img v-bind:src="speaker.image">
         </div>
         <div class="speaker-info">
-          <h3>{{ speaker.fullName }}</h3>
+          <h3>{{ speaker.name }}</h3>
+          <h4><em>{{ speaker.jobTitle }}</em></h4>
+          <p>{{ speaker.description }}</p>
         </div>
       </div>
     </div>`

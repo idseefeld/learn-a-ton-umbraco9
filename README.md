@@ -109,7 +109,7 @@ dotnet user-secrets init
 
 dotnet user-secrets set ConnectionStrings:umbracoDbDSN "Server=<machineName>\<instanceName>;Database=<databaseName>;User Id=<myUsername>;Password=<myPassword>;"
 ```
-*Don't forget to replace <machineName>, <instanceName>, <databaseName>, <myUsername> and <myPassword> by real values ;-)*
+*Don't forget to replace `<machineName>`, `<instanceName>`, `<databaseName>`, `<myUsername>` and `<myPassword>` by real values ;-)*
 
 Alternatively you can use "environmentVariables" section of `\Properties\launchSettings.json` like this:
 ```

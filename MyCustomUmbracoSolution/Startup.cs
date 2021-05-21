@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using MyCustomUmbracoSolution.Models;
 using Microsoft.OpenApi.Models;
 using System.Linq;
+using Microsoft.AspNetCore.Http;
 
 namespace MyCustomUmbracoSolution
 {
@@ -81,6 +82,7 @@ namespace MyCustomUmbracoSolution
 			{
 				app.UseDeveloperExceptionPage();
 
+				// we may want swagger docs only be available in development environment. Otherwise move the following two lines out of the if clause.
 				app.UseSwagger();
 				app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Backend v1"));
 			}
@@ -97,6 +99,20 @@ namespace MyCustomUmbracoSolution
 					u.UseBackOfficeEndpoints();
 					u.UseWebsiteEndpoints();
 				});
+
+#if DEBUG
+			if (env.IsDevelopment())
+			{
+				app.UseEndpoints(endpoints =>
+				{
+					endpoints.MapGet("/debug-config", ctx =>
+					{
+						var config = (_config as IConfigurationRoot).GetDebugView();
+						return ctx.Response.WriteAsync(config);
+					});
+				});
+			}
+#endif
 		}
 	}
 }

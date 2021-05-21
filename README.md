@@ -150,3 +150,13 @@ Be aware of the slightly different syntax:
 	`__` (double underscore) is used to separate section name and property
 
 	and you have to escape `\` in the server name: `"Server=MACHINENAME\\SQL-SERVER-INSTANCENAME;Database... `
+	
+Btw.: Emma Garland has explained the configuration option in much more details in her nice article 2020 24Days: 
+
+https://24days.in/umbraco-cms/2020/umbraco-dotnet-core-config/
+
+And Warren Buckley has prepared a video about configuration too:
+
+https://www.youtube.com/watch?v=AOFdQAODU5o
+
+

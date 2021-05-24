@@ -83,7 +83,7 @@ The third line registers an AppConfigModel instance in the DI container and make
 
 
 ### CORS
-In \Startup.cs add at the beginning:
+In \Startup.cs add right after `public class Startup {`:
 ```
 readonly string CorsAllowedOrigins = "_corsAllowedOrigins";
 ```
@@ -100,10 +100,9 @@ services.AddCors(o =>
 ```
 See how *appConfig.AllowedHosts* is used within the CORS setup.
 
-And further down in \Startup.cs in method Configure(...) add right before `app.UseUmbraco()...`:
+And finally further down in \Startup.cs in method Configure(...) add right before `app.UseUmbraco()...`:
 ```
 app.UseCors(CorsAllowedOrigins);
-
 ```
 
 

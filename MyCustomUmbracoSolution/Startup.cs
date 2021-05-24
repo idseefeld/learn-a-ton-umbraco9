@@ -87,6 +87,8 @@ namespace MyCustomUmbracoSolution
 				app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Backend v1"));
 			}
 
+			app.UseCors(CorsAllowedOrigins);
+
 			app.UseUmbraco()
 				.WithMiddleware(u =>
 				{
@@ -99,7 +101,6 @@ namespace MyCustomUmbracoSolution
 					u.UseBackOfficeEndpoints();
 					u.UseWebsiteEndpoints();
 				});
-
 #if DEBUG
 			if (env.IsDevelopment())
 			{

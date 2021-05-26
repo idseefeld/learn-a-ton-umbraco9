@@ -328,9 +328,9 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
-/WetherForecast/Backend/Data/Cache/
-/MyCustomUmbracoSolution/umbraco/Data/TEMP
-/MyCustomUmbracoSolution/umbraco/Logs
-/MyCustomUmbracoSolution/umbraco/mediacache/d/f/0/c/9/5/4/e
-/MyCustomUmbracoSolution/wwwroot/media/xm0ncgxk
-/MyCustomUmbracoSolution/umbraco/mediacache
+
+**/umbraco/Data/TEMP
+**/umbraco/Logs
+**/umbraco/mediacache
+**/umbraco/mediacache
+**/wwwroot/umbraco
